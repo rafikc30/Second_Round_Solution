@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+void* copy(void *pFrom,void *pTo,int nBytes)
+{
+	int i;
+	for(i=0;i<nBytes;i++)
+		pTo[i]=pFrom[i];
+return pTo;	
+}
+int main()
+{
+	int i;
+	void *p,*q;
+	
+	p=&a;
+	q=&b;
+	p=copy(p,q,3);
+	for(i=0;i<3;i++)
+		printf("%c",b[i]);
+}
